@@ -9,8 +9,9 @@ const MovieCard = ({movie: {
 }}) => {
   return (
     <div className="movie-card">
-        <h3 className='mb-4'>{title}</h3>
         <img src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : '/no-movie.png'} alt={`${title} Poster`} />
+
+        <h3 className='mt-4'>{title}</h3>
 
         <div className='content'>
             <div className='rating'>

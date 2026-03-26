@@ -46,6 +46,10 @@
   header img {
     @apply w-auto max-w-lg h-auto object-contain mx-auto drop-shadow-md;
   }
+
+  header img.logo {
+    @apply w-auto max-w-64 h-auto object-contain mx-auto drop-shadow-md;
+  }
 }
 
 @layer components {

@@ -128,6 +128,11 @@
       @apply size-4 object-contain;
     }
 
+
+    & .movie-description {
+      @apply text-white;
+    }
+
     & .rating p {
       @apply font-bold text-base text-white;
     }

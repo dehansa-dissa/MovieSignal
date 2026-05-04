@@ -117,7 +117,7 @@
     }
 
     & .content {
-      @apply mt-2 flex flex-row items-center flex-wrap gap-2;
+      @apply mt-2 flex flex-col gap-2;
     }
 
     & .rating {
@@ -130,7 +130,34 @@
 
 
     & .movie-description {
-      @apply text-white;
+      @apply text-white mb-2 relative;
+      max-height: 4.5em;
+      overflow: hidden;
+      transition: max-height 0.3s;
+      display: block;
+    }
+
+    & .movie-description.collapsed {
+      max-height: 4.5em;
+      overflow: hidden;
+    }
+
+    & .movie-description .read-more-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: 0.95em;
+      margin-left: 5px;
+      padding: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    & .movie-description:not(.collapsed) {
+      max-height: none;
+      overflow: visible;
     }
 
     & .rating p {
